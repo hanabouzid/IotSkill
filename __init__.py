@@ -20,10 +20,10 @@ class IotSkill(MycroftSkill):
     # The constructor of the skill, which calls MycroftSkill's constructor
     def __init__(self):
         super(IotSkill, self).__init__(name="IotSkill")
-        self.dict ={"london meeting room":"lampe_1","tokyo meeting room":"lampe_2"}
+        self.dict ={"london meeting room":"lampe_1","paris meeting room":"lampe_2","tokyo meeting room":"lampe_3"}
         self.lampe_1 = 3
         self.lampe_2 = 5
-        #self.lampe_3 = 12
+        self.lampe_3 = 12
 
     def allume_Lampe(self,pin_lampe):
         GPIO.setup(pin_lampe)
