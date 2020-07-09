@@ -2,8 +2,7 @@ from adapt.intent import IntentBuilder
 from mycroft.skills.core import MycroftSkill, intent_handler
 import pyrebase
 import RPi.GPIO as GPIO
-import time
-import json
+
 
 #declaration
 config = {
