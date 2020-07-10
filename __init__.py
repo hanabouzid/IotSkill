@@ -1,15 +1,15 @@
-from adapt.intent import IntentBuilder
-from mycroft.skills.core import MycroftSkill, intent_handler
 import pyrebase
 import RPi.GPIO as GPIO
-
-
+from adapt.intent import IntentBuilder
+from mycroft.skills.core import MycroftSkill, intent_handler
+import json
 #declaration
 config = {
   "apiKey": "AIzaSyBIcKApBiLDHvRKMobq_wmEMqxeWXGG5no",
   "authDomain": "smart-assistant-box-274114.firebaseapp.com",
   "databaseURL": "https://smart-assistant-box-274114.firebaseio.com",
-  "storageBucket": "smart-assistant-box-274114.appspot.com"
+  "storageBucket": "smart-assistant-box-274114.appspot.com",
+    "serviceAccount": "/opt/mycroft/skills/iotskill/smart-assistant-box.json"
 }
 firebase = pyrebase.initialize_app(config)
 db = firebase.database()

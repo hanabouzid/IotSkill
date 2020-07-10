@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "smart-assistant-box-274114",
+  "private_key_id": "0c8de3a2a9d2deaf4a35ab7713d26ec6be3e21d2",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCbzsVTDC+r+Z+L\n4NyQhWqTwy2WVzTUlvqYMryjBckhoELghDO4GLgQ+zE94Tx4xmMndIUv6QBeR4vL\nDrNNGSce+oXmzOlB8xHPrWG018kgjLDq0e0uSNRpYoNKRjTTuCLRp4AUa8sl66Cg\nY8ezeKHBOsyB518jn20FXlhk2ZFqFb2pvYWTcH25pNcTCfKGESeVnjKOLaszGxFF\nxhK9vP7dwNcAXLkya2IKVtHyNQn55GMBS3jhbSBdGOoWl36hgwMRO6aHT0UAY4dU\np9bYdkqWxhiPM29OlcfldSyfl7F/7HfyZJ3d5GTJCtMhTWWaOoa3u7dKDjeY8D8b\novhk2nb5AgMBAAECggEAKyYMrI6b5ycGwcCgpJ9mIAy148Q728ICHUMzzXvtMxRE\nYRQLlKi31PATt3zYd+QNEqCov9dppDJxKudjzW6xUFl12rCVyo9Lt/VesSvvRcXg\nuu8vHZnKxXKkRF4EBDwi3GfkRwOBK3vBLJnldLTsKuyjNTiDtwRQN2Pk2+0K4dM7\nngrH7ufXMIMXWssArD5aZsmeiNzZ651gML4axq1r7ieoVBjgSF4gFf0nA5sgzA78\nXzA989uHe6vZ3jmBcZL0CSHyGR860tkLVTSdzPN8qxQBzqCNqmdiszmez0pPQpYQ\nqvx8ROlo2XvjvrriKYbKOKmfdruZM3BWECi7qebCBwKBgQDWth0XQXSmyVvRe1AD\nEwGMlOucbt4tuGlozXG+rpKJ9tH7AB1mLdMELC7I8cnHODqcGYtxTDeY969cvwaW\nC8xck9yxCxBpRkvA2K/y7hgiaYjvNHX0DCu7nC32TvI1H/jVHtHGYUcp8Bb1JLIJ\nBrDl2FGg/fB8EDrSZuYblT2UcwKBgQC5xO0dDuyj2iS0ArVPMsFtExq71RzFeNeP\nqFT0rUCxGCpiDU5HAQjya7nC/Mq/FUC+mhttsfLMz7l992ne0ODvkSAW4M2S/jcW\nBrpJS3S8yzwBrMxi6/aqwyCbKRZKWkbhblxJajYq3/6lsRRXpAxbltpiAiJYiXvj\n2DUz1JCX4wKBgF6IymAt4qV4rKOcDot798ek3eP/cHVi545MPlN9W2nBMYy47TjK\n3kjNB0BULMo5OJz4JkwZCbWhACXuuYCg6zarp5SP0Yb4e2wKO9XS/O9R1gez6mcs\nYKj2x8nV0pCPZii3rBcTR5jwa7s9j+Gnf4WDa9VdWV/WaX+v7Iqid/1/AoGAGNbf\nCaKkO6iAfd1a1vMnb+k9Ct6NEU5+LERKz8iWvNdJW4EB9XaK9rc2yH66sWArHxFG\nF53SpFYmLFS3wEZXvVC/ZK+8bSo2vWg64nAHdPML3AF59sQsYFrk8jpFM73seloi\nVuKvyX3X89nAqZNS37BFFRPJ+eKwQR/4xSxoBRcCgYEAonDIwl/41L9SkXFZ8VNB\nD43e9CBP+6FnZ5gbPJqTdoBHgJu9ieTDDjrdDBmjYh4OXs6A34Np38RXkT6vtnx0\na0faBPlIzsHrRjJ71puBAshCQcOBUiEoBbD92hbtmQdVyiX8X/Aj4BDNy2Ut68dH\nXxvILNuDY8NAiid3GrLxQ4k=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-szslz@smart-assistant-box-274114.iam.gserviceaccount.com",
+  "client_id": "102784965640309752720",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-szslz%40smart-assistant-box-274114.iam.gserviceaccount.com"
+}

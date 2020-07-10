@@ -1,10 +1,12 @@
 import pyrebase
 import RPi.GPIO as GPIO
+import json
 config = {
-  "apiKey": "AIzaSyBIcKApBiLDHvRKMobq_wmEMqxeWXGG5no",
-  "authDomain": "smart-assistant-box-274114.firebaseapp.com",
-  "databaseURL": "https://smart-assistant-box-274114.firebaseio.com",
-  "storageBucket": "smart-assistant-box-274114.appspot.com"
+    "apiKey": "AIzaSyBIcKApBiLDHvRKMobq_wmEMqxeWXGG5no",
+    "authDomain": "smart-assistant-box-274114.firebaseapp.com",
+    "databaseURL": "https://smart-assistant-box-274114.firebaseio.com",
+    "storageBucket": "smart-assistant-box-274114.appspot.com",
+    "serviceAccount": "/opt/mycroft/skills/iotskill/smart-assistant-box.json"
 }
 firebase = pyrebase.initialize_app(config)
 db = firebase.database()
