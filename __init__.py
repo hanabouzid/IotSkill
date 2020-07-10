@@ -69,5 +69,12 @@ class IotSkill(MycroftSkill):
         else:
             self.speak_dialog("roomsOff")
 
+    @intent_handler(IntentBuilder("").require("all_light_soff"))
+    def affich_lightsOn(self, message):
+        for key, value in self.dict.items():
+            if db.child(key).child(value).get().val() == "ON":
+                self.eteindre_Lampe(value)
+                db.child(key).child(value).setValue("OFF")
+        self.speak_dialog("roomsOff")
 def create_skill():
     return IotSkill()

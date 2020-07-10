@@ -21,8 +21,7 @@ def eteindre_Lampe(pin_lampe):
     GPIO.setup(pin_lampe)
     GPIO.output(pin_lampe,0)
     print ("eteindre",pin_lampe)
-
-
+#eteindre lampe
 utt = input("request off")
 list = utt.split(" in ")
 room = list[1]
@@ -31,6 +30,8 @@ for cle, valeur in dict.items():
         eteindre_Lampe(valeur)
         db.child(cle).child(valeur).setValue("OFF")
         print("off")
+
+#allumer lampe
 utt = input("request on")
 list = utt.split(" in ")
 room =list[1]
@@ -39,6 +40,7 @@ for cle, valeur in dict.items():
         allume_Lampe(valeur)
         db.child(cle).child(valeur).setValue("ON")
         print("On")
+#rooms with lights on
 roomlist =[]
 for key,value in dict.items():
     if db.child(key).child(value).get().val() == "ON":
@@ -48,3 +50,9 @@ if roomlist!=[]:
     print("roomsOn"+s)
 else:
     print("roomsOff")
+#all lights off
+for key, value in dict.items():
+    if db.child(key).child(value).get().val() == "ON":
+        eteindre_Lampe(value)
+        db.child(key).child(value).setValue("OFF")
+print("roomsOff")
