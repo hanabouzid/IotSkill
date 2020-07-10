@@ -25,12 +25,12 @@ class IotSkill(MycroftSkill):
         self.lampe_3 = 12
 
     def allume_Lampe(self,pin_lampe):
-        GPIO.setup(pin_lampe)
+        GPIO.setup(pin_lampe,GPIO.OUT)
         GPIO.output(pin_lampe,1)
         print("allume", pin_lampe)
 
     def eteindre_Lampe(self,pin_lampe):
-        GPIO.setup(pin_lampe)
+        GPIO.setup(pin_lampe,GPIO.OUT)
         GPIO.output(pin_lampe,0)
         print("eteindre", pin_lampe)
 
