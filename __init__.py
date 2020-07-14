@@ -9,7 +9,7 @@ config = {
   "authDomain": "smart-assistant-box-274114.firebaseapp.com",
   "databaseURL": "https://smart-assistant-box-274114.firebaseio.com",
   "storageBucket": "smart-assistant-box-274114.appspot.com",
-    "serviceAccount": "/opt/mycroft/skills/iotskill/smart-assistant-box.json"
+    "serviceAccount": "/opt/mycroft/skills/iotskill.hanabouzid/smart-assistant-box.json"
 }
 firebase = pyrebase.initialize_app(config)
 db = firebase.database()
