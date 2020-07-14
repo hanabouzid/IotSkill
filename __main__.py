@@ -11,16 +11,16 @@ config = {
 firebase = pyrebase.initialize_app(config)
 db = firebase.database()
 GPIO.setmode(GPIO.BOARD)
-dict = {"london meeting room": "lampe_1", "paris meeting room": "lampe_2", "tokyo meeting room": "lampe_3"}
 lampe_1 = 3
 lampe_2 = 5
 lampe_3 = 12
+dict = {"london meeting room":lampe_1, "paris meeting room":lampe_2, "tokyo meeting room":lampe_3}
 def allume_Lampe(pin_lampe):
-    GPIO.setup(pin_lampe)
+    GPIO.setup(pin_lampe,GPIO.OUT)
     GPIO.output(pin_lampe,1)
     print("allume",pin_lampe)
 def eteindre_Lampe(pin_lampe):
-    GPIO.setup(pin_lampe)
+    GPIO.setup(pin_lampe,GPIO.OUT)
     GPIO.output(pin_lampe,0)
     print ("eteindre",pin_lampe)
 #eteindre lampe
@@ -30,7 +30,8 @@ room = list[1]
 for cle, valeur in dict.items():
     if cle == room:
         eteindre_Lampe(valeur)
-        db.child(cle).child(valeur).setValue("OFF")
+        dict2={cle:"OFF"}
+        db.update(dict2)
         print("off")
 
 #allumer lampe
@@ -40,21 +41,23 @@ room =list[1]
 for cle, valeur in dict.items():
     if cle == room:
         allume_Lampe(valeur)
-        db.child(cle).child(valeur).setValue("ON")
+        dict3={cle:"ON"}
+        db.update(dict3)
         print("On")
 #rooms with lights on
 roomlist =[]
 for key,value in dict.items():
-    if db.child(key).child(value).get().val() == "ON":
+    if db.child(key).get().val() == "ON":
         roomlist.append(key)
 if roomlist!=[]:
     s = ",".join(roomlist)
     print("roomsOn"+s)
 else:
-    print("roomsOff")
+    print("all rooms Off")
 #all lights off
 for key, value in dict.items():
-    if db.child(key).child(value).get().val() == "ON":
+    if db.child(key).get().val() == "ON":
         eteindre_Lampe(value)
-        db.child(key).child(value).setValue("OFF")
+        dict4={key:"OFF"}
+        db.update(dict4)
 print("roomsOff")
