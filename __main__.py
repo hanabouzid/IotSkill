@@ -16,11 +16,11 @@ lampe_1 = 3
 lampe_2 = 5
 lampe_3 = 12
 def allume_Lampe(pin_lampe):
-    GPIO.setup(pin_lampe,GPIO.OUT)
+    GPIO.setup(pin_lampe)
     GPIO.output(pin_lampe,1)
     print("allume",pin_lampe)
 def eteindre_Lampe(pin_lampe):
-    GPIO.setup(pin_lampe,GPIO.OUT)
+    GPIO.setup(pin_lampe)
     GPIO.output(pin_lampe,0)
     print ("eteindre",pin_lampe)
 #eteindre lampe
