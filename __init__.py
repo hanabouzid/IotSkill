@@ -14,16 +14,15 @@ config = {
 firebase = pyrebase.initialize_app(config)
 db = firebase.database()
 GPIO.setmode(GPIO.BOARD)
+lampe_1 = 3
+lampe_2 = 5
+lampe_3 = 12
+dict = {"london meeting room":lampe_1, "paris meeting room":lampe_2,"tokyo meeting room":lampe_3}
 class IotSkill(MycroftSkill):
 
     # The constructor of the skill, which calls MycroftSkill's constructor
     def __init__(self):
         super(IotSkill, self).__init__(name="IotSkill")
-        self.lampe_1 = 3
-        self.lampe_2 = 5
-        self.lampe_3 = 12
-        self.dict ={"london meeting room":self.lampe_1,"paris meeting room":self.lampe_2,"tokyo meeting room":self.lampe_3}
-
 
     def allume_Lampe(self,pin_lampe):
         GPIO.setup(pin_lampe,GPIO.OUT)
@@ -40,7 +39,7 @@ class IotSkill(MycroftSkill):
         utt = message.data.get("utterance", None)
         list = utt.split(" in ")
         room =list[1]
-        for cle, valeur in self.dict.items():
+        for cle, valeur in dict.items():
             if cle == room:
                 self.allume_Lampe(valeur)
                 dict2 = {cle: "ON"}
@@ -52,7 +51,7 @@ class IotSkill(MycroftSkill):
         utt = message.data.get("utterance", None)
         list = utt.split(" in ")
         room = list[1]
-        for cle, valeur in self.dict.items():
+        for cle, valeur in dict.items():
             if cle == room:
                 self.eteindre_Lampe(valeur)
                 dict3 = {cle: "OFF"}
@@ -62,7 +61,7 @@ class IotSkill(MycroftSkill):
     @intent_handler(IntentBuilder("").require("displaylights"))
     def affich_lightsOn(self, message):
         roomlist =[]
-        for key,value in self.dict.items():
+        for key,value in dict.items():
             if db.child(key).get().val() == "ON":
                 roomlist.append(key)
         if roomlist!=[]:
