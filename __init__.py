@@ -17,7 +17,7 @@ GPIO.setmode(GPIO.BOARD)
 lampe_1 = 3
 lampe_2 = 5
 lampe_3 = 12
-dict = {"london meeting room":lampe_1, "paris meeting room":lampe_2,"tokyo meeting room":lampe_3}
+dict = {"london room":lampe_1, "paris room":lampe_2,"tokyo room":lampe_3}
 class IotSkill(MycroftSkill):
 
     # The constructor of the skill, which calls MycroftSkill's constructor

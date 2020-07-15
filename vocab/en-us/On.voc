@@ -1,1 +1,1 @@
-set lights on in {{room}}
+turn lights on in {{room}}
