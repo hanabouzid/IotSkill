@@ -70,7 +70,7 @@ class IotSkill(MycroftSkill):
         else:
             self.speak_dialog("roomsOff")
 
-    @intent_handler(IntentBuilder("").require("all_light_soff"))
+    @intent_handler(IntentBuilder("").require("all_lights_off"))
     def all_lights_off(self, message):
         for key, value in dict.items():
             if db.child(key).get().val() == "ON":
