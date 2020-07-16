@@ -58,7 +58,7 @@ class IotSkill(MycroftSkill):
                 db.update(dict3)
                 self.speak_dialog("Off")
 
-    @intent_handler(IntentBuilder("").require("displaylights"))
+    @intent_handler(IntentBuilder("").require("display_lights"))
     def affich_lightsOn(self, message):
         roomlist =[]
         for key,value in dict.items():
